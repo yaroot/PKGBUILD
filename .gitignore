@@ -2,6 +2,7 @@ pkg/
 src/
 googlefontdirectory/
 *.pkg.tar*
+*.tar.gz
 *.zip
 *.ttf
 *.otf
