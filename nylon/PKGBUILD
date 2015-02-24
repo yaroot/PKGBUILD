@@ -1,0 +1,34 @@
+# vim:set ts=2 sw=2 et:
+# Contributor: Nathan Owe <ndowens04 at gmail>
+pkgname=nylon
+pkgver=1.21
+pkgrel=3
+pkgdesc="A proxy server that supports SOCKS v4 and v5"
+arch=('i686' 'x86_64')
+url="http://monkey.org/~marius/pages/?page=nylon"
+license=('unknown')
+depends=('libevent')
+source=(http://monkey.org/~marius/nylon/$pkgname-$pkgver.tar.gz
+        http://monkey.org/~marius/tmp/nylon.conf
+        service)
+backup=(etc/nylon.conf)
+
+build() {
+  cd $srcdir/$pkgname-$pkgver
+
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd $srcdir/$pkgname-$pkgver
+
+  make bindir=$pkgdir/usr/bin mandir=$pkgdir/usr/share/man install
+  install -Dm644 LICENSE $pkgdir/usr/share/licenses/$pkgname
+  install -Dm644 $startdir/nylon.conf $pkgdir/etc/nylon.conf
+  install -Dm644 $startdir/service $pkgdir/usr/lib/systemd/system/nylon.service
+}
+
+sha256sums=('34c132b005c025c1a5079aae9210855c80f50dc51dde719298e1113ad73408a4'
+            'b82da832567da27880a17deb389d83d745c15d256321711c1c1f92d9665632b9'
+            'ba21057d604b64cdb4573326ab36ffbb02256bb238880f4155267a5a4dce846c')

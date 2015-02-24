@@ -1,0 +1,11 @@
+[Unit]
+Description=secure pipe daemon
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/spiped/%i.conf
+ExecStart=/usr/bin/spiped -F -p /dev/null $DAEMON_OPTS
+
+[Install]
+WantedBy=multi-user.target
