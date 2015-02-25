@@ -1,6 +1,6 @@
 
 pkgname=spiped
-pkgver=1.4.2
+pkgver=1.5.0
 pkgrel=9999
 pkgdesc="secure pipe daemon"
 arch=('i686' 'x86_64')
@@ -8,7 +8,7 @@ url="http://www.tarsnap.com/spiped.html"
 license=('BSD')
 depends=('openssl')
 source=(http://www.tarsnap.com/$pkgname/$pkgname-$pkgver.tgz example.conf service)
-sha256sums=('dcb668f98a6bd761ff542f7079034f828f792259300eeb16aab53b687a805bde'
+sha256sums=('b2f74b34fb62fd37d6e2bfc969a209c039b88847e853a49e91768dec625facd7'
             '6584a9ccfcc5a31f6145aad4b2c9f36a9b84abda6309cd3ab2eaf10c4806d499'
             '60105e88ddc99508f1406bb291e8b0c3f342d63b26cb7e37980563b6b7d71f28')
 
