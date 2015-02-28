@@ -7,7 +7,7 @@ _prefix=/opt/openresty
 _pushstreamver=0.4.1
 
 pkgname=openresty
-pkgver=1.7.4.1
+pkgver=1.7.7.2
 pkgrel=1
 pkgdesc="a powerful web app server by extending nginx"
 arch=('i686' 'x86_64')
@@ -26,13 +26,15 @@ backup=(${_cfgdir:1}/fastcgi.conf
         etc/logrotate.d/openresty)
 #install=
 source=(http://openresty.org/download/$_pkgname-$pkgver.tar.gz
-        nginx-push-stream-module-${_pushstreamver}.tar.gz::https://github.com/wandenberg/nginx-push-stream-module/archive/${_pushstreamver}.tar.gz
         service
         logrotate)
+        # nginx-push-stream-module-${_pushstreamver}.tar.gz::https://github.com/wandenberg/nginx-push-stream-module/archive/${_pushstreamver}.tar.gz
 sha256sums=('46239c72a1059ff703c119512d56eb4a82c89060701371eebc01b351f31efcad'
-            '553584f557a3faec73702550e7e1417cbc0021f4f98468cc83e61e9d94def5cc'
+            '41290a052042701f29b30fadf9ed828f5730ea43aac1282ee2b6c85e3b89651a')
+sha256sums=('5cd6db20c3b4e9f128eda7e7b31810f8b278ea0644fdd9d2f51b34ad2b356298'
             '77d5dc4804cb10bdac15d8fa82330de8b5a99fe9a9f8b3f59d218f544c53b9e8'
             '41290a052042701f29b30fadf9ed828f5730ea43aac1282ee2b6c85e3b89651a')
+            # '553584f557a3faec73702550e7e1417cbc0021f4f98468cc83e61e9d94def5cc'
 
 build() {
     cd $_pkgname-$pkgver
@@ -69,8 +71,8 @@ build() {
         --with-http_mp4_module \
         --with-http_secure_link_module \
         --with-http_sub_module \
-        --with-luajit \
-        --add-module=../nginx-push-stream-module-${_pushstreamver}
+        --with-luajit
+        # --add-module=../nginx-push-stream-module-${_pushstreamver}
     make
 }
 
