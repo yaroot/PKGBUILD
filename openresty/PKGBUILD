@@ -8,7 +8,7 @@ _pushstreamver=0.4.1
 
 pkgname=openresty
 pkgver=1.7.10.1
-pkgrel=1
+pkgrel=9999
 pkgdesc="a powerful web app server by extending nginx"
 arch=('i686' 'x86_64')
 url="http://openresty.org/"
