@@ -15,7 +15,7 @@
 PKGEXT='.pkg.tar.xz'
 
 pkgname=ttf-google-fonts-hg
-pkgver=3637.59645863804d
+pkgver=3776.0f6c13aa0c81
 pkgrel=1
 pkgdesc='TrueType fonts from the Google Fonts project (uses official upstream sources)'
 arch=('any')
@@ -59,6 +59,8 @@ conflicts=('ttf-google-webfonts'
            'ttf-roboto'
            'ttf-sil-fonts'
            'ttf-sortsmillgoudy'
+           'ttf-source-code-pro'
+           'ttf-source-sans-pro'
            'ttf-ubuntu-font-family'
            'ttf-vollkorn')
 provides=("${conflicts[@]}" 'ttf-font')
