@@ -12,7 +12,7 @@
 #        smaller and leaner, yet unofficial, repository hosted on GitHub.
 #
 
-PKGEXT='.pkg.tar.xz'
+PKGEXT='.pkg.tar.gz'
 
 pkgname=ttf-google-fonts-hg
 pkgver=3776.0f6c13aa0c81

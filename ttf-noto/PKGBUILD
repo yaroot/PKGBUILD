@@ -1,9 +1,9 @@
 # Maintainer: tailinchu <use_my_id at gmail dot com>
-PKGEXT='.pkg.tar.xz'
+PKGEXT='.pkg.tar.gz'
 
 pkgname=ttf-noto
-pkgver=20140716
-pkgrel=1
+pkgver=20141229
+pkgrel=2
 pkgdesc="Fonts support all languages/characters in Unicode"
 arch=('any')
 url="http://www.google.com/get/noto"
@@ -13,7 +13,7 @@ makedepends=()
 conflicts=()
 provides=('ttf-font')
 source=("http://www.google.com/get/noto/pkgs/Noto-hinted.zip")
-md5sums=('e72d000d9e90729a6caceff7afaf1f45')
+md5sums=('48f8b01aad66c46c1f2befbaeaf3b3b3')
 install=$pkgname.install
 
 package() {
