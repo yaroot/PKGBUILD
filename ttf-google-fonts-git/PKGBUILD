@@ -9,8 +9,10 @@
 # Contributor: Michalis Georgiou <mechmg93@gmail.comr>
 # Contributor: Alexander De Sousa <archaur.xandy21@spamgourmet.com>
 
+PKGEXT='.pkg.tar.gz'
+
 pkgname=ttf-google-fonts-git
-pkgver=20150316
+pkgver=20150404
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project"
 arch=('any')
@@ -21,7 +23,10 @@ depends=('cantarell-fonts'
          'fontconfig'
          'xorg-fonts-encodings'
          'xorg-mkfontdir'
-         'xorg-mkfontscale')
+         'xorg-mkfontscale'
+         'ttf-inconsolata'
+         'ttf-droid'
+         )
 makedepends=('git')
 conflicts=('adobe-source-code-pro-fonts'
            'adobe-source-sans-pro-fonts'
@@ -38,12 +43,10 @@ conflicts=('adobe-source-code-pro-fonts'
            'ttf-cardo'
            'ttf-chromeos-fonts'
            'ttf-comfortaa'
-           'ttf-droid'
            'ttf-google-fonts-hg'
            'ttf-google-webfonts'
            'ttf-google-webfonts-git'
            'ttf-google-webfonts-hg'
-           'ttf-inconsolata'
            'ttf-kimberly_geswein_print'
            'ttf-lato'
            'ttf-lekton'
@@ -66,18 +69,21 @@ conflicts=('adobe-source-code-pro-fonts'
            'ttf-fira-mono'
            'ttf-fira-sans'
            'ttf-lato')
+
+
 provides=("${conflicts[@]}" 'ttf-font')
-source=("git://github.com/google/fonts.git")
+#source=("git://github.com/google/fonts.git")
+source=("https://github.com/google/fonts/archive/master.tar.gz")
 md5sums=('SKIP')
 install=font.install
 
 # git variables
-_gitname="fonts"
+#_gitname="fonts"
 
-pkgver() {
-  cd "$srcdir/$_gitname"
-  git log -1 --format="%cd" --date=short | sed 's|-||g'
-}
+# pkgver() {
+#   cd "$srcdir/$_gitname"
+#   git log -1 --format="%cd" --date=short | sed 's|-||g'
+# }
 
 package() {
   cd "$srcdir"
@@ -92,4 +98,6 @@ package() {
   # cantarell-fonts package installs its fonts into /usr/share/fonts/cantarell/
   # and because cantarell-fonts installs .otf files instead of .ttf files
   find "${pkgdir}/usr/share/fonts/TTF" -type f -name "Cantarell-*.ttf" -delete
+  find "${pkgdir}/usr/share/fonts/TTF" -type f -name "Droid*.ttf" -delete
+  find "${pkgdir}/usr/share/fonts/TTF" -type f -name "Noto*.ttf" -delete
 }
