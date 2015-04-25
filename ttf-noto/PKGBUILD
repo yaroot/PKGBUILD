@@ -2,8 +2,8 @@
 PKGEXT='.pkg.tar.gz'
 
 pkgname=ttf-noto
-pkgver=20141229
-pkgrel=2
+pkgver=20150420
+pkgrel=1
 pkgdesc="Fonts support all languages/characters in Unicode"
 arch=('any')
 url="http://www.google.com/get/noto"
@@ -20,6 +20,5 @@ package() {
     mkdir -p $pkgdir/usr/share/fonts/{TTF,OTF}
     cp $srcdir/*.ttf $pkgdir/usr/share/fonts/TTF
     cp $srcdir/*.otf $pkgdir/usr/share/fonts/OTF
-	chmod 644 $pkgdir/usr/share/fonts/{TTF,OTF}/*
+    chmod 644 $pkgdir/usr/share/fonts/{TTF,OTF}/*
 }
-
