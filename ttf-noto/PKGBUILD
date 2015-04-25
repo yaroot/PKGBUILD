@@ -1,5 +1,4 @@
 # Maintainer: tailinchu <use_my_id at gmail dot com>
-PKGEXT='.pkg.tar.gz'
 
 pkgname=ttf-noto
 pkgver=20150420
@@ -13,8 +12,9 @@ makedepends=()
 conflicts=()
 provides=('ttf-font')
 source=("http://www.google.com/get/noto/pkgs/Noto-hinted.zip")
-md5sums=('48f8b01aad66c46c1f2befbaeaf3b3b3')
+md5sums=('175038af6d30fa5c6f1cc24b7977375b')
 install=$pkgname.install
+# PKGEXT='.pkg.tar.gz'
 
 package() {
     mkdir -p $pkgdir/usr/share/fonts/{TTF,OTF}
