@@ -16,8 +16,8 @@ source_x86_64=(http://dbeaver.jkiss.org/files/dbeaver-$pkgver-ee-linux.gtk.x86_6
 
 sha256sums=('cf1e850dcb3544507eeb59b8d2e84b67cd25b546e3eaf03a0ab27ca841361478'
             '0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f'
-            '9adbaaee8cfbbb1b0b56a55c721a2cba06bfd1a2d45a457ad94c51fae0676525')
-sha256sums_x86_64=('ec52c079fe42d512302579ce7f6f730749780b26220d02fbadaaccbe0d490780')
+            '40280428cd6772d5ed359ea571f99cc7e7da7e3970c7eaab1c0beee1e0d17831')
+sha256sums_x86_64=('81559fb291609d4e06cce7aea9f5cf74a3709a0693473eb12ad54ddc60c9638c')
 
 package() {
   cd $pkgdir
