@@ -21,7 +21,7 @@
 # Inconsolata: Google ships a modified version.
 
 pkgname=ttf-google-fonts-opinionated-git
-pkgver=20150528
+pkgver=20150608
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project"
 arch=('any')
@@ -62,7 +62,6 @@ conflicts=('adobe-source-code-pro-fonts'
            'ttf-lekton'
            'ttf-medievalsharp'
            'ttf-nova'
-           'ttf-noto'
            'ttf-oldstandard'
            'ttf-opensans'
            'ttf-oxygen'
@@ -106,4 +105,5 @@ package() {
   find "${pkgdir}/usr/share/fonts/" -type f -name "Droid*.ttf" -delete
   find "${pkgdir}/usr/share/fonts/" -type f -name "Fira*.ttf" -delete
   find "${pkgdir}/usr/share/fonts/" -type f -name "Inconsolata-*.ttf" -delete
+  find "${pkgdir}/usr/share/fonts/" -type f -name "Noto*.ttf" -delete
 }
