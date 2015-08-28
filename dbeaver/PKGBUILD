@@ -1,7 +1,7 @@
 # Maintainer: Arne Hoch <arne@derhoch.de>
 
 pkgname=dbeaver
-pkgver=3.4.4
+pkgver=3.4.5
 pkgrel=1
 pkgdesc="A free universal database tool for developers and database administrators"
 arch=('i686' 'x86_64')
@@ -11,13 +11,11 @@ depends=('java-runtime>=1.6' 'gtk2' 'gtk-update-icon-cache')
 makedepends=('unzip')
 install=dbeaver.install
 
-source=(dbeaver.desktop dbeaver.install "dbeaver-driver-pack-${pkgver}.zip::http://dbeaver.jkiss.org/files/driver-pack-${pkgver}.zip")
+source=(dbeaver.desktop dbeaver.install)
 source_x86_64=(http://dbeaver.jkiss.org/files/dbeaver-$pkgver-ee-linux.gtk.x86_64.zip)
-
 sha256sums=('cf1e850dcb3544507eeb59b8d2e84b67cd25b546e3eaf03a0ab27ca841361478'
-            '0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f'
-            '85b25c832a4957a69b27be2b4b04438e1c94d44999fa1a168f6a4f652fe5563a')
-sha256sums_x86_64=('a82f56190ea130f707a1a7fba259251b3226cd5c55563cd8d9f78d3fdf42e6ac')
+            '0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f')
+sha256sums_x86_64=('216b50ff11f418a6475dd2e54cbdcab30f14ce5e04906fc0e570fa34507e0f44')
 
 package() {
   cd $pkgdir
@@ -32,6 +30,6 @@ package() {
   install -m 644 $srcdir/dbeaver.desktop $pkgdir/usr/share/applications/
 
 
-  cp -r $srcdir/drivers opt/dbeaver/
+  # cp -r $srcdir/drivers opt/dbeaver/
 }
 
