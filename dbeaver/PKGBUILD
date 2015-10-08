@@ -1,21 +1,30 @@
 # Maintainer: Arne Hoch <arne@derhoch.de>
 
 pkgname=dbeaver
-pkgver=3.4.5
+pkgver=3.5.1
 pkgrel=1
 pkgdesc="A free universal database tool for developers and database administrators"
 arch=('i686' 'x86_64')
 url="http://dbeaver.jkiss.org/"
 license=("GPL2")
 depends=('java-runtime>=1.6' 'gtk2' 'gtk-update-icon-cache')
-makedepends=('unzip')
+#makedepends=('unzip')
 install=dbeaver.install
 
 source=(dbeaver.desktop dbeaver.install)
-source_x86_64=(http://dbeaver.jkiss.org/files/dbeaver-$pkgver-ee-linux.gtk.x86_64.zip)
+source_x86_64=(http://dbeaver.jkiss.org/files/$pkgver/dbeaver-ee-$pkgver-linux.gtk.x86_64.tar.gz)
+noextract=("dbeaver-ee-$pkgver-linux.gtk.x86_64.tar.gz")
+
+
 sha256sums=('cf1e850dcb3544507eeb59b8d2e84b67cd25b546e3eaf03a0ab27ca841361478'
             '0c2a75baa39459fa56159e982d9f28c966837561bd52dffd24bac87b8d65555f')
-sha256sums_x86_64=('216b50ff11f418a6475dd2e54cbdcab30f14ce5e04906fc0e570fa34507e0f44')
+sha256sums_x86_64=('97649720704ccdb4ad5183ab4897945bf07028ff8f5f951456afda04cf567074')
+
+prepare() {
+  mkdir -p $srcdir/$pkgname
+  cd $srcdir/$pkgname
+  tar -xf "$srcdir/dbeaver-ee-$pkgver-linux.gtk.x86_64.tar.gz"
+}
 
 package() {
   cd $pkgdir
@@ -29,7 +38,5 @@ package() {
   ln -s /opt/dbeaver/dbeaver usr/bin/dbeaver
   install -m 644 $srcdir/dbeaver.desktop $pkgdir/usr/share/applications/
 
-
   # cp -r $srcdir/drivers opt/dbeaver/
 }
-
