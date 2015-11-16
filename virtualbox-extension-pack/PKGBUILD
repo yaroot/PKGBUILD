@@ -35,4 +35,4 @@ package() {
 		"${pkgdir}/usr/share/licenses/${pkgname}/license.txt"
 }
 
-sha256sums=('93b01ac2c575388ea6ae994450907c24e30a788c271ae9ff18512a06f28d9abd')
+sha256sums=('febd2c99909cb932a98c2b9f73ce8eb03fc183c8c8f2fc874985cf3d598f6b94')
