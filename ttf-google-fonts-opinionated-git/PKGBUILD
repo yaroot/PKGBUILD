@@ -1,3 +1,4 @@
+PKGEXT='.pkg.tar.gz'
 pkgname=ttf-google-fonts-git
 pkgver=20151118
 pkgrel=1
