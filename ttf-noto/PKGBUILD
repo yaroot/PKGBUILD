@@ -2,7 +2,7 @@
 # Co-Maintainer: basica <aur basica at gmail dot com>
 
 pkgname=ttf-noto
-pkgver=20150927
+pkgver=20160609
 pkgrel=1
 pkgdesc="Fonts support all languages/characters in Unicode"
 arch=('any')
@@ -12,8 +12,8 @@ depends=('fontconfig' 'xorg-fonts-encodings' 'xorg-font-utils')
 provides=('ttf-font')
 source=("https://noto-website-2.storage.googleapis.com/pkgs/Noto-hinted.zip")
 install=$pkgname.install
-PKGEXT='.pkg.tar' # because XZ compression is awfully slow
-md5sums=('fda808346be9480459dc19dee6addf3f')
+PKGEXT='.pkg.tar.gz' # because XZ compression is awfully slow
+md5sums=('92e5af616ba8f5b420141a37c13b4d1c')
 
 package() 
 {	
