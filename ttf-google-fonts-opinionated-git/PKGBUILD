@@ -1,6 +1,6 @@
 PKGEXT='.pkg.tar.gz'
 pkgname=ttf-google-fonts-git
-pkgver=20151118
+pkgver=20160609
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project"
 arch=('any')
@@ -69,8 +69,8 @@ install=font.install
 _gitname="fonts"
 
 pkgver() {
-  cd "$srcdir/$_gitname"
-  git log -1 --format="%cd" --date=short | sed 's|-||g'
+  cd "$_gitname"
+  # git log -1 --format="%cd" --date=short | sed 's|-||g'
 }
 
 package() {
