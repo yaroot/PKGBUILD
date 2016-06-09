@@ -61,12 +61,13 @@ conflicts=(
            'ttf-ubuntu-font-family'
            'ttf-vollkorn')
 provides=("${conflicts[@]}" 'ttf-font')
-source=("git://github.com/google/fonts.git")
+source=("https://github.com/google/fonts/archive/master.tar.gz")
+#source=("git://github.com/google/fonts.git")
 md5sums=('SKIP')
 install=font.install
 
 # git variables
-_gitname="fonts"
+#_gitname="fonts"
 
 # pkgver() {
 #   cd "$_gitname"
