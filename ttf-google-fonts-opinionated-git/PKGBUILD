@@ -68,10 +68,10 @@ install=font.install
 # git variables
 _gitname="fonts"
 
-pkgver() {
-  cd "$_gitname"
-  # git log -1 --format="%cd" --date=short | sed 's|-||g'
-}
+# pkgver() {
+#   cd "$_gitname"
+#   git log -1 --format="%cd" --date=short | sed 's|-||g'
+# }
 
 package() {
   cd "$srcdir"
