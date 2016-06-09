@@ -17,8 +17,8 @@ md5sums=('fda808346be9480459dc19dee6addf3f')
 
 package() 
 {	
-	install -dm 755 $pkgdir/usr/share/fonts/{TTF,OTF}
-	install -D -m644 $srcdir/*.ttf $pkgdir/usr/share/fonts/TTF
-	install -D -m644 $srcdir/*.otf $pkgdir/usr/share/fonts/OTF	
+    install -dm 755 $pkgdir/usr/share/fonts/{TTF,OTF}
+    install -D -m644 $srcdir/*.ttf $pkgdir/usr/share/fonts/TTF
+    install -D -m644 $srcdir/*.otf $pkgdir/usr/share/fonts/OTF
     install -D -m644 $srcdir/LICENSE_OFL.txt $pkgdir/usr/share/licenses/$pkgname/LICENSE_OFL.txt
 }
