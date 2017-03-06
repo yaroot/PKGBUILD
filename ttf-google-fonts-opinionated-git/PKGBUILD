@@ -1,8 +1,8 @@
 PKGEXT='.pkg.tar.gz'
 pkgname=ttf-google-fonts-git
-pkgver=20161221
+pkgver=20170213
 pkgrel=1
-pkgdesc="TrueType fonts from the Google Fonts project"
+pkgdesc="TrueType fonts from the Google Fonts project (git version)"
 arch=('any')
 url="https://github.com/google/fonts"
 license=('various')
@@ -36,6 +36,7 @@ conflicts=(
            'ttf-cardo'
            'ttf-chromeos-fonts'
            'ttf-comfortaa'
+           'ttf-croscore'
            'ttf-google-fonts-hg'
            'ttf-google-webfonts'
            'ttf-google-webfonts-git'
@@ -44,17 +45,21 @@ conflicts=(
            'ttf-lato'
            'ttf-lekton'
            'ttf-medievalsharp'
+           'ttf-merriweather'
+           'ttf-merriweather-sans'
            'ttf-nova'
-           'ttf-oldstandard'
            'ttf-opensans'
+           'ttf-oswald'
            'ttf-overpass'
            'ttf-oxygen'
            'ttf-oxygen-git'
            'ttf-pt-mono'
            'ttf-pt-sans'
            'ttf-ptsans'
+           'ttf-quintessential'
            'ttf-roboto'
            'ttf-roboto-mono'
+           'ttf-signika'
            'ttf-sil-fonts'
            'ttf-sortsmillgoudy'
            'ttf-source-code-pro'
