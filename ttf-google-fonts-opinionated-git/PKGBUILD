@@ -1,6 +1,6 @@
 PKGEXT='.pkg.tar.gz'
 pkgname=ttf-google-fonts-git
-pkgver=20170213
+pkgver=20170306
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project (git version)"
 arch=('any')
@@ -48,6 +48,7 @@ conflicts=(
            'ttf-merriweather'
            'ttf-merriweather-sans'
            'ttf-nova'
+           'ttf-oldstandard'
            'ttf-opensans'
            'ttf-oswald'
            'ttf-overpass'
@@ -70,10 +71,6 @@ provides=("${conflicts[@]}" 'ttf-font')
 source=("https://github.com/google/fonts/archive/master.tar.gz")
 #source=("git://github.com/google/fonts.git")
 md5sums=('SKIP')
-install=font.install
-
-# git variables
-#_gitname="fonts"
 
 # pkgver() {
 #   cd "$_gitname"
