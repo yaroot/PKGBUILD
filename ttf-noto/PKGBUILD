@@ -1,6 +1,7 @@
 # Maintainer: tailinchu <use_my_id at gmail dot com>
 # Co-Maintainer: basica <aur basica at gmail dot com>
 
+PKGEXT='.pkg.tar'
 pkgname=ttf-noto
 pkgver=20161008
 pkgrel=1
@@ -11,8 +12,6 @@ license=('custom:OFL')
 depends=('fontconfig' 'xorg-fonts-encodings' 'xorg-font-utils')
 provides=('ttf-font')
 source=("https://noto-website-2.storage.googleapis.com/pkgs/Noto-hinted.zip")
-install=$pkgname.install
-PKGEXT='.pkg.tar.gz' # because XZ compression is awfully slow
 md5sums=('SKIP')
 
 package() 
