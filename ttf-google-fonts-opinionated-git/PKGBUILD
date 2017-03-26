@@ -80,8 +80,7 @@ md5sums=('SKIP')
 package() {
   cd "$srcdir"
   install -dm755 "$pkgdir/usr/share/fonts/TTF"
-  find . -type f -name \*.ttf -exec install -Dm644 '{}' \
-    "$pkgdir/usr/share/fonts/TTF" \;
+  find . -type f -name \*.ttf -exec install -Dm644 '{}' ${pkgdir}/usr/share/fonts/TTF \;
 
   # Remove excluded fonts.
   find "${pkgdir}/usr/share/fonts/" -type f -name "Cantarell-*.ttf" -delete
