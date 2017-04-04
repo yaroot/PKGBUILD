@@ -68,7 +68,7 @@ conflicts=(
            'ttf-ubuntu-font-family'
            'ttf-vollkorn')
 provides=("${conflicts[@]}" 'ttf-font')
-source=("https://github.com/google/fonts/archive/master.tar.gz")
+source=("fonts-master.tar.gz::https://github.com/google/fonts/archive/master.tar.gz")
 #source=("git://github.com/google/fonts.git")
 md5sums=('SKIP')
 
