@@ -3,7 +3,7 @@
 
 PKGEXT='.pkg.tar'
 pkgname=ttf-noto
-pkgver=20161008
+pkgver=20170404
 pkgrel=1
 pkgdesc="Fonts support all languages/characters in Unicode"
 arch=('any')
@@ -11,8 +11,22 @@ url="http://www.google.com/get/noto"
 license=('custom:OFL')
 depends=('fontconfig' 'xorg-fonts-encodings' 'xorg-font-utils')
 provides=('ttf-font')
-source=("https://noto-website.storage.googleapis.com/pkgs/Noto-hinted.zip")
-md5sums=('SKIP')
+source=(
+https://noto-website.storage.googleapis.com/pkgs/Noto-hinted.zip
+https://noto-website.storage.googleapis.com/pkgs/NotoSerifCJKjp-hinted.zip
+https://noto-website.storage.googleapis.com/pkgs/NotoSerifCJKsc-hinted.zip
+https://noto-website.storage.googleapis.com/pkgs/NotoSerifCJKtc-hinted.zip
+https://noto-website.storage.googleapis.com/pkgs/NotoSerifCJKkr-hinted.zip
+"source-han-code-jp-2.000R.zip::https://github.com/adobe-fonts/source-han-code-jp/archive/2.000R.zip"
+)
+md5sums=(
+'SKIP'
+'SKIP'
+'SKIP'
+'SKIP'
+'SKIP'
+'SKIP'
+)
 
 package() 
 {	
