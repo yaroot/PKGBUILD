@@ -1,6 +1,6 @@
 PKGEXT='.pkg.tar'
 pkgname=ttf-google-fonts-git
-pkgver=20170306
+pkgver=20170324
 pkgrel=1
 pkgdesc="TrueType fonts from the Google Fonts project (git version)"
 arch=('any')
@@ -21,7 +21,7 @@ depends=('cantarell-fonts'
          'adobe-source-sans-pro-fonts'
          'adobe-source-serif-pro-fonts'
          )
-makedepends=('git')
+#makedepends=('git')
 conflicts=(
            'googlefontdirectory'
            'jsmath-fonts'
