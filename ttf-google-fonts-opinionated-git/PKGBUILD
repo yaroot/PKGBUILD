@@ -1,12 +1,12 @@
 PKGEXT='.pkg.tar'
 pkgname=ttf-google-fonts-git
-pkgver=20170324
-pkgrel=1
+pkgver=20170626
+pkgrel=2
 pkgdesc="TrueType fonts from the Google Fonts project (git version)"
 arch=('any')
 url="https://github.com/google/fonts"
 license=('various')
-# About why "cantarell-fonts" is a dependency see comment in package() function.
+# About why "cantarell-fonts" and "noto-fonts" is a dependency see comment in package() function.
 depends=('cantarell-fonts'
          'fontconfig'
          'xorg-fonts-encodings'
@@ -43,6 +43,7 @@ conflicts=(
            'ttf-google-webfonts-hg'
            'ttf-kimberly_geswein_print'
            'ttf-lato'
+           'ttf-lora-cyrillic'
            'ttf-lekton'
            'ttf-medievalsharp'
            'ttf-merriweather'
