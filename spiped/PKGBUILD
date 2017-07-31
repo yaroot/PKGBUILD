@@ -9,8 +9,8 @@ license=('BSD')
 depends=('openssl')
 source=(http://www.tarsnap.com/$pkgname/$pkgname-$pkgver.tgz example.conf service)
 sha256sums=('e6f7f8f912172c3ad55638af8346ae7c4ecaa92aed6d3fb60f2bda4359cba1e4'
-            '6584a9ccfcc5a31f6145aad4b2c9f36a9b84abda6309cd3ab2eaf10c4806d499'
-            '60105e88ddc99508f1406bb291e8b0c3f342d63b26cb7e37980563b6b7d71f28')
+            'SKIP'
+            'SKIP')
 
 build() {
   cd $srcdir/$pkgname-$pkgver
