@@ -2,7 +2,7 @@
 # Contributer: rtfreedman  <rob<d0t>til<d0t>freedman< T>googlemail<d0t>com>
 
 pkgname=virtualbox-extension-pack
-pkgver=5.1.26
+pkgver=5.1.28
 pkgrel=1
 pkgdesc='Oracle VM VirtualBox Extension Pack - Support for USB 2.0 devices, VirtualBox RDP and PXE boot for Intel cards'
 arch=('i686' 'x86_64')
@@ -13,6 +13,7 @@ conflicts=('virtualbox-ext-oracle')
 optdepends=('rdesktop: client to connect vm via RDP')
 options=('!strip')
 source=("http://download.virtualbox.org/virtualbox/${pkgver}/Oracle_VM_VirtualBox_Extension_Pack-${pkgver}.vbox-extpack")
+sha256sums=('SKIP')
 
 if [[ "${CARCH}" = "i686" ]];  then
 	installarch="linux.x86"
@@ -35,4 +36,3 @@ package() {
 		"${pkgdir}/usr/share/licenses/${pkgname}/license.txt"
 }
 
-sha256sums=('14f152228495a715f526eb74134d43c960919cc534d2bc67cfe34a63e6cf7721')
