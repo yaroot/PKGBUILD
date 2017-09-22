@@ -20,6 +20,7 @@ sha512sums=('7c14c395fab3024191145b5c965c6c89211cd36ce405cafeef350aa6df9850bee9d
 
 build() {
   cd $pkgname-$pkgver
+  sed -i "s#\"1\", 1, 16, 'x'#\"1\", 1, 100, 'x'#" **/*.cc
 
   ./configure \
     --prefix=/usr \
