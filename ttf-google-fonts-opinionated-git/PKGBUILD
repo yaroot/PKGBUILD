@@ -1,24 +1,33 @@
 PKGEXT='.pkg.tar'
 pkgname=ttf-google-fonts-git
-pkgver=r1206.2e2caa23
-pkgrel=2
+pkgver=r1212.a16b8302
+pkgrel=4
 epoch=1
 pkgdesc="TrueType fonts from the Google Fonts project (git version)"
-arch=(any)
+arch=('any')
 url="https://github.com/google/fonts"
 license=('custom:SIL Open Font License' 'custom:Ubuntu Font License v1.0')
 
 # About why "cantarell-fonts" and "noto-fonts" is a dependency see comment in package() function.
-depends=('cantarell-fonts'
-         'fontconfig'
-         'xorg-fonts-encodings'
+depends=('fontconfig'
          'xorg-mkfontdir'
          'xorg-mkfontscale'
+         'xorg-fonts-encodings'
 
          'ttf-droid'
          'ttf-fira-sans'
          'ttf-fira-mono'
+         'ttf-ubuntu-font-family'
+         'ttf-croscore'
+         'ttf-roboto'
          'ttf-inconsolata'
+         'cantarell-fonts'
+         'ttf-merriweather'
+         'ttf-merriweather-sans'
+         'ttf-opensans'
+         'ttf-oswald'
+         'ttf-quintessential'
+         'ttf-signika'
          'adobe-source-code-pro-fonts'
          'adobe-source-sans-pro-fonts'
          'adobe-source-serif-pro-fonts'
