@@ -19,7 +19,7 @@ build() {
 package() {
   cd ${pkgname}-${pkgver}
   make DESTDIR="$pkgdir" install
-  install -Dm0644 doc/sample.config "$pkgdir/etc/ocserv.config"
-  install -Dm0600 doc/sample.passwd "$pkgdir/etc/ocserv-passwd"
+  install -Dm0644 doc/sample.config "$pkgdir/etc/ocserv/ocserv.conf"
+  install -Dm0600 doc/sample.passwd "$pkgdir/etc/ocserv/passwd"
   install -Dm0644 doc/systemd/standalone/ocserv.service "$pkgdir/usr/lib/systemd/system/ocserv.service"
 }
