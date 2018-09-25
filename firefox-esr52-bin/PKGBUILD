@@ -5,7 +5,7 @@
 # Previous Maintainer: Simon Tunnat <simon+aur@tunn.at>
 # Contributor: Bartlomiej Piotrowski <nospam@bpiotrowski.pl>
 
-pkgname=firefox-esr-bin
+pkgname=firefox-esr52-bin
 _pkgname=${pkgname/-bin/}
 pkgver=52.9.0
 pkgrel=1
