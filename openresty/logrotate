@@ -1,9 +1,0 @@
-/var/log/openresty/*log {
-	missingok
-	create 640 http log
-	sharedscripts
-	compress
-	postrotate
-		test -r /var/run/openresty.pid && kill -USR1 `cat /var/run/openresty.pid`
-	endscript
-}
