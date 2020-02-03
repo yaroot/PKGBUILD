@@ -1,0 +1,27 @@
+pkgname=dbeaver-bin
+pkgver=6.3.4
+pkgrel=1
+pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
+arch=('i686' 'x86_64')
+url="http://dbeaver.com/"
+license=("Apache")
+depends=('java-runtime>=1.8' 'gtk3' 'gtk-update-icon-cache')
+
+source_x86_64=(https://dbeaver.io/files/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz)
+
+noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
+
+prepare() {
+    mkdir -p $srcdir/$pkgname
+    cd $srcdir/$pkgname
+    tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
+}
+
+package() {
+    cd $pkgdir
+    mkdir -p opt usr/bin
+
+    cp -r $srcdir/$pkgname/dbeaver opt/$pkgname
+    ln -s /opt/${pkgname}/dbeaver usr/bin/dbeaver
+}
+sha256sums_x86_64=('f3a1f190d8c360e783dacdfd65992bb433ea1cbb636c7fe64e6c7ca7f7618aac')

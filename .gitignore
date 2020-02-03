@@ -10,3 +10,5 @@ googlefontdirectory/
 *.tgz
 *.xz
 *.bz2
+*.part
+*.zst
