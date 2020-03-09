@@ -16,13 +16,14 @@ build() {
 package() {
   cd fq-$pkgver
   local dest=$pkgdir/usr
-  mkdir -p $dest/{bin,lib,include}
+  mkdir -p $dest/{bin,lib,include,share/fq}
   mkdir -p $dest/lib/systemd/system
 
   cp fq_bench fq_rcvr fq_sndr fqc fqd fqs fqtool $dest/bin
   cp service-configs/circonus-fq.service $dest/lib/systemd/system
-  cp libfq.so $dest/lib
   cp fq.h $dest/include
+  cp libfq.so $dest/lib
   ln -s /usr/lib/libfq.so $dest/lib/libfq.so.0
   ln -s /usr/lib/libfq.so $dest/lib/libfq.so.0.13.0
+  cp -r web $dest/share/fq/
 }
