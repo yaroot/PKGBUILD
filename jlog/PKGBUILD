@@ -1,0 +1,21 @@
+pkgname=jlog
+pkgver=2.4.0
+pkgrel=1
+pkgdesc="Journaled Log"
+arch=('i686' 'x86_64')
+url="https://github.com/omniti-labs/jlog"
+source=("https://github.com/omniti-labs/jlog/archive/$pkgver.tar.gz")
+sha256sums=('3843c48ca5c0debe22ea2d2f7de5c1a17a046699e628fd0a0a41ada14b0fece7')
+license=('BSD')
+
+build() {
+  cd jlog-$pkgver
+  autoconf
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd jlog-$pkgver
+  make DESTDIR=$pkgdir install
+}
