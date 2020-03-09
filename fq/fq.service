@@ -1,0 +1,13 @@
+[Unit]
+Description=FQ
+After=network.target
+
+[Service]
+#User=fq
+#WorkingDirectory=
+ExecStart=/usr/bin/fqd -D
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
