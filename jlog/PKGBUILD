@@ -10,7 +10,7 @@ license=('BSD')
 
 build() {
   cd jlog-$pkgver
-  sed -i 's#define DEFAULT_UNIT_LIMIT [(]4#define DEFAULT_UNIT_LIMIT (512#' jlog_private.h
+  sed -i 's#define DEFAULT_UNIT_LIMIT [(]4#define DEFAULT_UNIT_LIMIT (1024#' jlog_private.h
   autoconf
   ./configure --prefix=/usr
   make
