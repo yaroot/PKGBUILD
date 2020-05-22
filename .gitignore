@@ -11,3 +11,5 @@ googlefontdirectory/
 *.xz
 *.zip
 *.zst
+*.AppImage
+*.asc
