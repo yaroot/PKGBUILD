@@ -6,7 +6,7 @@ arch=(x86_64)
 url=https://github.com/purescript/spago
 license=(BSD)
 depends=(purescript)
-source=(spago-$pkgver.tar.gz::https://github.com/purescript/spago/releases/download/0.15.2/linux.tar.gz)
+source=(spago-$pkgver.tar.gz::https://github.com/purescript/spago/releases/download/$pkgver/linux.tar.gz)
 sha256sums=('dd24a9ecabf48eb69687ade52c33f71c397ad8d2750de2dbe06678c8de618b4d')
 
 package() {
