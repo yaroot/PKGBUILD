@@ -13,3 +13,4 @@ googlefontdirectory/
 *.zst
 *.AppImage
 *.asc
+.watchurls/

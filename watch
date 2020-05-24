@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# set -ex
+
+mkdir -p .watchurls
+
+monitor_update() {
+    local pkg=$1
+    local url=`grep '^_watchurl='  $pkg/PKGBUILD`
+    url="${url:10}"
+    test -z "$url" && return
+    echo "=> Downloading $url"
+
+    local newchecksum=$(curl -s $url | sha256sum | cut -d " " -f 1 )
+
+    local checkfile=".watchurls/${pkg}_checksum"
+    if [ -f $checkfile ]; then
+        if [ "$(cat $checkfile)" = "$newchecksum" ]; then
+            echo '  no updates'
+        else
+            echo "  new update $url"
+            echo "$newchecksum" | tee $checkfile > /dev/null
+        fi
+    else
+        echo "  initializing"
+        echo "$newchecksum" | tee $checkfile > /dev/null
+    fi
+}
+
+
+for x in *; do
+    test -f $x/PKGBUILD && monitor_update $x
+done
