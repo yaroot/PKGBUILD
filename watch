@@ -9,7 +9,7 @@ monitor_update() {
     local url=`grep '^_watchurl='  $pkg/PKGBUILD`
     url="${url:10}"
     test -z "$url" && return
-    echo "=> Downloading $url"
+    echo "=> Downloading [$pkg] $url"
 
     local newchecksum=$(curl -s $url | sha256sum | cut -d " " -f 1 )
 
