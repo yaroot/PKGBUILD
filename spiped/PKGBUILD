@@ -11,6 +11,7 @@ source=(http://www.tarsnap.com/$pkgname/$pkgname-$pkgver.tgz example.conf servic
 sha256sums=('8d7089979db79a531a0ecc507b113ac6f2cf5f19305571eff1d3413e0ab33713'
             'SKIP'
             'SKIP')
+_watchurl='https://www.tarsnap.com/spiped/'
 
 build() {
   cd $srcdir/$pkgname-$pkgver

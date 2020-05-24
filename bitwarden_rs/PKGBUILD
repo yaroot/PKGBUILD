@@ -29,6 +29,7 @@ sha512sums=('242f10592dec87b83cd9ea360dc83901cb8adaf019c9220ea910824d8f9a7d98c71
             '6fd0ea962f077f92ad7f55a1bab479e68e3463b41eb171d501847554b676b7ecf05e016544f6331bdb53bf71038fcf2ce67ad213d0a7c2f93acbafd72e8441a6'
             '9fde678747d120704d0d99751af1eebd89ba2643af5917da9d9d2a8712fe5bb6ef1d3545d3b669467d14cab51c0c1514853364f323ff92bab7e7ed8501fe5b56')
 _src="$pkgname-$pkgver"
+_watchurl='https://api.github.com/repos/dani-garcia/bitwarden_rs/releases'
 
 build() {
 	# rustup is not required, but if it exists, we have to set the profile. Otherwise, fail silently.

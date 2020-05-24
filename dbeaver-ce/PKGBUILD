@@ -6,6 +6,7 @@ arch=('i686' 'x86_64')
 url="http://dbeaver.com/"
 license=("Apache")
 depends=('java-runtime>=1.8' 'gtk3' 'gtk-update-icon-cache')
+_watchurl='https://dbeaver.io/files/'
 
 source_x86_64=(https://dbeaver.io/files/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz)
 

@@ -15,6 +15,8 @@ source=("https://cancel.fm/dl/$_file"{,.asc})
 sha256sums=('SKIP'
             'SKIP')
 
+_watchurl='https://cancel.fm/dl/'
+
 # !! AppImage is emptied if symbols are stripped away !!
 # But beyond that, the program is deployed with symbols on purpose
 options=('!strip')

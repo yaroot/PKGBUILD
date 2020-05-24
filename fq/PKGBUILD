@@ -7,6 +7,7 @@ url="https://github.com/circonus-labs/fq"
 source=("https://github.com/circonus-labs/fq/archive/v$pkgver.tar.gz" fq.service)
 sha256sums=('01fb729a0a2257c944e6489718ce6d334f3dd3639cb8d604592c291d1bd017ea' 'SKIP')
 license=('MIT')
+_watchurl='https://api.github.com/repos/circonus-labs/fq/releases'
 
 build() {
   cd fq-$pkgver

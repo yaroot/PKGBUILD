@@ -9,6 +9,7 @@ depends=('libnl' 'talloc' 'libseccomp' 'libev' 'oath-toolkit')
 backup=('etc/ocserv.config' 'etc/ocserv-passwd')
 source=("$pkgname-$pkgver.tar.xz::https://src.fedoraproject.org/repo/pkgs/ocserv/ocserv-0.12.1.tar.xz/sha512/3fc5e6c6a3b4390cb0ffa78fac4f8e70aa689227c6f5b62180b95f35cf2de0c41075a157412de40866ce1af12ad8feabd87b2b986c8ca09ebee70514da9ec13f/ocserv-0.12.1.tar.xz")
 sha512sums=('3fc5e6c6a3b4390cb0ffa78fac4f8e70aa689227c6f5b62180b95f35cf2de0c41075a157412de40866ce1af12ad8feabd87b2b986c8ca09ebee70514da9ec13f')
+_watchurl='https://gitlab.com/openconnect/ocserv/-/tags?format=atom'
 
 build() {
   cd ${pkgname}-${pkgver}
