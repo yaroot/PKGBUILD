@@ -8,6 +8,7 @@ license=(BSD)
 depends=(purescript)
 source=(purty-$pkgver-linux.tar.gz::https://bintray.com/joneshf/generic/download_file?file_path=purty-$pkgver-linux.tar.gz)
 sha256sums=('b1bc9fabfeb3c0d75fcc2a610186741d803a23a862d72f383695c7d330f2dedc')
+_watchurl='https://gitlab.com/joneshf/purty/-/tags?format=atom'
 
 package() {
     install -Dm755 $srcdir/purty $pkgdir/usr/bin/purty

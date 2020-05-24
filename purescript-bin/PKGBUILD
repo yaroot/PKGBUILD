@@ -12,6 +12,7 @@ provides=(purescript)
 conflicts=(purescript)
 source=(purescript-v$pkgver-linux64.tar.gz::https://github.com/purescript/purescript/releases/download/v$pkgver/linux64.tar.gz)
 sha1sums=('03fe4e7a7fae8e65f26751267891a5e5a477b1d6')
+_watchurl='https://api.github.com/repos/purescript/purescript/releases'
 
 package() {
     cd "$srcdir/purescript/$f"
