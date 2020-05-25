@@ -1,0 +1,34 @@
+_java_ver=14
+_zulu_ver=14.28.21
+_zulu_build=14.0.1
+_zulu_feature=''
+pkgname="zulu-${_java_ver}-bin"
+pkgver=$_zulu_ver
+pkgrel=1
+pkgdesc='zulu jdk'
+arch=('x86_64')
+url='https://www.azul.com/products/zulu-community/'
+license=('custom')
+options=(!strip)
+depends=('java-environment-common=3' 'java-runtime-common>=3' 'ca-certificates-utils')
+provides=(
+  "java-environment=$_java_ver"
+  "java-environment-openjdk=$_java_ver"
+  "java-runtime-headless=$_java_ver"
+  "java-runtime-headless-openjdk=$_java_ver"
+  "java-runtime=$_java_ver"
+  "java-runtime-openjdk=$_java_ver"
+)
+
+_tarball_name=zulu${_zulu_ver}-ca${_zulu_feature}-jdk${_zulu_build}-linux_x64
+source=("https://cdn.azul.com/zulu/bin/$_tarball_name.tar.gz")
+sha256sums=('48bb8947034cd079ad1ef83335e7634db4b12a26743a0dc314b6b861480777aa')
+
+
+package() {
+  install_dir=$pkgdir/usr/lib/jvm
+
+  mkdir -p $install_dir
+  mv $srcdir/$_tarball_name $install_dir/zulu-$_java_ver
+  rm -rf $install_dir/zulu-$_java_ver/{legal,demo}
+}
