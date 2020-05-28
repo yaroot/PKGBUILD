@@ -1,3 +1,4 @@
+.watchurls/
 pkg/
 src/
 googlefontdirectory/
@@ -13,4 +14,4 @@ googlefontdirectory/
 *.zst
 *.AppImage
 *.asc
-.watchurls/
+*.xpi

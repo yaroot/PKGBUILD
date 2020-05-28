@@ -1,0 +1,16 @@
+pkgname=firefox-container-tabs-sidebar
+pkgver=0.3.4
+pkgrel=1
+pkgdesc='Point and click matrix to filter net requests by source, destination and type'
+url=https://addons.mozilla.org/en-US/firefox/addon/container-tabs-sidebar
+arch=('any')
+license=('GPL3')
+groups=('firefox-addons')
+_file=container_tabs_sidebar-$pkgver-fx.xpi
+source=("$_file::https://addons.cdn.mozilla.net/user-media/addons/977961/$_file")
+noextract=("$_file")
+sha256sums=('9911fd23a376139b7aeda27355f06d51b8c308282309ce9d180bb36768a461be')
+
+package() {
+  install -Dm644 $_file "$pkgdir"/usr/lib/firefox/browser/extensions/containertabssidebar@maciekmm.net.xpi
+}
