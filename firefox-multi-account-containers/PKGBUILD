@@ -11,6 +11,7 @@ _file=firefox_multi_account_containers-${pkgver}-fx.xpi
 source=("$_file::https://addons.cdn.mozilla.net/user-media/addons/782160/$_file") #firefox_multi_account_containers-${pkgver}-fx.xpi")
 noextract=("$_file")
 sha256sums=('4f7b981adc510005ba7fed566ced1f5a31fb383993cb292741fd6a5d6db7f001')
+_watchurl='https://addons.mozilla.org/api/v4/addons/addon/multi-account-containers/versions/'
 
 package() {
   install -Dm644 $_file "$pkgdir"/usr/lib/firefox/browser/extensions/@testpilot-containers.xpi
