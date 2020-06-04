@@ -17,7 +17,7 @@ package() {
 
 # install -Dm644 vip.cfg            $pkgdir/etc/vip.cfg
 # install -Dm755 vip                $pkgdir/usr/bin/vip
-  install -Dm644 eoip.cfg           $pkgdir/etc/eoip.cfg
+# install -Dm644 eoip.cfg           $pkgdir/etc/eoip.cfg
   install -Dm755 eoip               $pkgdir/usr/bin/eoip
   install -Dm644 $srcdir/service    $pkgdir/usr/lib/eoip.service
 }
