@@ -1,0 +1,9 @@
+[Unit]
+Description=Linux support for proprietary MIkrotik EoIP protocol
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/bin/eoip /etc/eoip.cfg
+
+[Install]
+WantedBy=multi-user.target

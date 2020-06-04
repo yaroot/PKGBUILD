@@ -1,0 +1,23 @@
+# vim:set ts=2 sw=2 et:
+pkgname=linux-eoip
+pkgver=0.5
+pkgrel=1
+pkgdesc="Linux support for proprietary MIkrotik EoIP protocol"
+arch=('i686' 'x86_64')
+url="https://code.google.com/archive/p/linux-eoip/"
+license=('GPL3')
+source=(https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/linux-eoip/linux-eoip-$pkgver.tgz
+        service)
+
+package() {
+  cd $srcdir/$pkgname-$pkgver
+
+  ./configure --prefix=/usr
+  make
+
+  install -Dm644 eoip.cfg   $pkgdir/etc/eoip.cfg
+  install -Dm755 eoip       $pkgdir/usr/bin/eoip
+}
+
+sha256sums=('97fa59518353fa91b032b651ace60e94c31f18613ea695dea3154d932bf1a8ff'
+            'SKIP')
