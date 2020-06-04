@@ -17,6 +17,7 @@ package() {
 
   install -Dm644 eoip.cfg   $pkgdir/etc/eoip.cfg
   install -Dm755 eoip       $pkgdir/usr/bin/eoip
+  install -Dm644 service    $pkgdir/usr/lib/eoip.service
 }
 
 sha256sums=('97fa59518353fa91b032b651ace60e94c31f18613ea695dea3154d932bf1a8ff'
