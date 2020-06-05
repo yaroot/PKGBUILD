@@ -1,0 +1,36 @@
+
+pkgname=milkman
+pkgver=4.4.0
+pkgrel=1
+pkgdesc="An Extensible Request/Response Workbench"
+arch=('x86_64')
+url="https://github.com/warmuuh/milkman"
+license=("MIT")
+depends=('java-runtime')
+options=(!strip)
+_watchurl='https://api.github.com/repos/warmuuh/milkman/releases'
+
+source_x86_64=(
+        milkman-$pkgver.tgz::https://github.com/warmuuh/milkman/releases/download/$pkgver/milkman-dist-linux64-bin.tgz
+        milkman-plugins-$pkgver.zip::https://github.com/warmuuh/milkman/releases/download/$pkgver/milkman-dist-plugins-bin.zip
+        milkman.sh
+        )
+
+package() {
+    cd $srcdir
+
+    # remove bundled javafx
+    rm      milkman-$pkgver/install.sh
+    rm      milkman-$pkgver/classes.lst
+    rm      milkman-$pkgver/milkman.sh
+    rm -rf  milkman-$pkgver/jre-*/
+
+    mkdir -p $pkgdir/usr/bin $pkgdir/opt
+    cp -r milkman-$pkgver $pkgdir/opt/milkman
+    cp $srcdir/milkman.sh $pkgdir/opt/milkman/milkman.sh
+    ln -s /opt/milkman/milkman.sh $pkgdir/usr/bin/milkman
+}
+
+sha256sums_x86_64=('7785547800bd52fdfab6cc01b3571137bdfafb0a45002abfa7522e858e55063e'
+                   '8f8d1aef893be94e778d604db523dbb837d3ba50df5fe908d5044949e4add5d6'
+                   'SKIP')
