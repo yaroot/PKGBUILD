@@ -15,7 +15,6 @@ monitor_update() {
     url=$(eval "echo $url")
 
     local newchecksum=$(curl -s "$url" | sha256sum | cut -d " " -f 1 )
-    echo $newchecksum
 
     local checkfile=".watchurls/${pkg}_checksum"
     if [ -f $checkfile ]; then
