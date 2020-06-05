@@ -11,7 +11,11 @@ monitor_update() {
     test -z "$url" && return
     echo "=> Downloading [$pkg] $url"
 
-    local newchecksum=$(curl -s $url | sha256sum | cut -d " " -f 1 )
+    # get rid of the quotes around the url
+    url=$(eval "echo $url")
+
+    local newchecksum=$(curl -s "$url" | sha256sum | cut -d " " -f 1 )
+    echo $newchecksum
 
     local checkfile=".watchurls/${pkg}_checksum"
     if [ -f $checkfile ]; then
