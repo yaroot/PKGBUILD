@@ -3,6 +3,7 @@ Description=Linux support for proprietary MIkrotik EoIP protocol
 After=syslog.target network.target
 
 [Service]
+Type=forking
 ExecStart=/usr/bin/eoip /etc/eoip.cfg
 
 [Install]

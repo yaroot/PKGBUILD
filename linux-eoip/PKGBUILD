@@ -19,7 +19,7 @@ package() {
 # install -Dm755 vip                $pkgdir/usr/bin/vip
 # install -Dm644 eoip.cfg           $pkgdir/etc/eoip.cfg
   install -Dm755 eoip               $pkgdir/usr/bin/eoip
-  install -Dm644 $srcdir/service    $pkgdir/usr/lib/eoip.service
+  install -Dm644 $srcdir/service    $pkgdir/usr/lib/systemd/system/eoip.service
 }
 
 sha256sums=('97fa59518353fa91b032b651ace60e94c31f18613ea695dea3154d932bf1a8ff'
