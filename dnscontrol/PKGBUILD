@@ -1,0 +1,14 @@
+pkgname=dnscontrol
+pkgver=3.2.0
+pkgrel=1
+pkgdesc="Synchronize your DNS to multiple providers from a simple DSL"
+arch=(x86_64)
+url=https://github.com/StackExchange/dnscontrol
+license=(MIT)
+source=(dnscontrol-$pkgver::https://github.com/StackExchange/dnscontrol/releases/download/v$pkgver/dnscontrol-Linux)
+sha256sums=('307d2a7a2224ebd29dfbeb1a8427af50588c00f323ded5f68ce3675872fbb45f')
+_watchurl='https://api.github.com/repos/StackExchange/dnscontrol/releases'
+
+package() {
+    install -Dm755 $srcdir/dnscontrol-$pkgver $pkgdir/usr/bin/dnscontrol
+}
