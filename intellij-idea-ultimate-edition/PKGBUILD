@@ -1,0 +1,23 @@
+pkgname=intellij-idea-ultimate-edition
+_buildver=201.7846.76
+_veryear=2020
+_verrelease=1.2
+pkgver=${_veryear}.${_verrelease}
+pkgrel=1
+pkgdesc="Intellij Idea IDE with Intellij JDK"
+arch=('any')
+options=(!strip)
+url="http://www.jetbrains.com/idea/"
+license=('Apache2')
+depends=('giflib' 'libxtst')
+source=("https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz")
+
+package() {
+    cd $srcdir
+    mkdir -p $pkgdir/opt $pkgdir/usr/bin
+
+    cp -r $srcdir/idea-IU-$_buildver $pkgdir/opt/$pkgname
+    ln -sv /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/ideau
+}
+
+sha256sums=('183d9f1c01122b3cc6ec1c0ae4367f519f48c4314a23c5e46edf18cff8977af4')
