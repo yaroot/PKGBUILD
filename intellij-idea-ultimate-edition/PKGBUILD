@@ -8,7 +8,7 @@ pkgdesc="Intellij Idea IDE with Intellij JDK"
 arch=('any')
 options=(!strip)
 url="http://www.jetbrains.com/idea/"
-license=('Apache2')
+license=('CUSTOM')
 depends=('giflib' 'libxtst')
 source=("https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz")
 
