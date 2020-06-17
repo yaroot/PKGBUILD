@@ -1,0 +1,25 @@
+# Maintainer: Amr Hassan <amr.hassan at gmail dot com>
+
+pkgname=intellij-idea-ce
+_buildver=201.7846.76
+_veryear=2020
+_verrelease=1.2
+pkgver=${_veryear}.${_verrelease}
+pkgrel=1
+pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
+arch=('any')
+options=(!strip)
+url="http://www.jetbrains.com/idea/"
+license=('Apache2')
+depends=('giflib' 'libxtst')
+source=("https://download.jetbrains.com/idea/ideaIC-${pkgver}.tar.gz")
+
+package() {
+    cd $srcdir
+    mkdir -p $pkgdir/opt $pkgdir/usr/bin
+
+    cp -r $srcdir/idea-IC-$_buildver $pkgdir/opt/$pkgname
+    ln -sv /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/idea
+}
+
+sha256sums=('8d1e0b359cff49f17c0122422519a5e01676f07dd68070d13e6ed165aec7ee1d')
