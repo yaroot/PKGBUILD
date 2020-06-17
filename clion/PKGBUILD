@@ -1,0 +1,19 @@
+pkgname=clion
+_dlname=CLion
+pkgver=2020.1.2
+pkgrel=2
+epoch=1
+pkgdesc="C/C++ IDE. Free 30-day trial."
+arch=('x86_64')
+options=(!strip)
+url="http://www.jetbrains.com/clion"
+license=('custom')
+source=("https://download.jetbrains.com/cpp/${_dlname}-${pkgver}.tar.gz")
+sha256sums=('c7d52c5059883c71d3db1271e82f513d0a3d1054efb69cd7d1f3e99ac1b2ab60')
+
+package() {
+    mkdir -p $pkgdir/opt $pkgdir/usr/bin
+
+    cp -r $srcdir/$pkgname-$pkgver $pkgdir/opt/$pkgname
+    ln -sv /opt/clion/bin/clion.sh $pkgdir/usr/bin/$pkgname
+}
