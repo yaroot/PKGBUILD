@@ -1,11 +1,10 @@
 pkgname=jlog
-pkgver=2.4.0
+pkgver=2.5.2
 pkgrel=1
 pkgdesc="Journaled Log"
 arch=('i686' 'x86_64')
 url="https://github.com/omniti-labs/jlog"
 source=("https://github.com/omniti-labs/jlog/archive/$pkgver.tar.gz")
-sha256sums=('3843c48ca5c0debe22ea2d2f7de5c1a17a046699e628fd0a0a41ada14b0fece7')
 license=('BSD')
 _watchurl='https://api.github.com/repos/omniti-labs/jlog/releases'
 
@@ -21,3 +20,4 @@ package() {
   cd jlog-$pkgver
   make DESTDIR=$pkgdir install
 }
+sha256sums=('f649e289bcecd72341713fc5c0562037433aabaad47831a1249bd4f78bb24e58')
