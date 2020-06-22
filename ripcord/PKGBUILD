@@ -1,7 +1,5 @@
-# Maintainer: Aanok <aanok.aur@gmail.com>
-# Contributor: therealfarfetchd
 pkgname='ripcord'
-pkgver=0.4.25
+pkgver=0.4.26
 pkgrel=1
 pkgdesc='Qt-based Discord and Slack client'
 arch=('x86_64')
@@ -17,13 +15,7 @@ sha256sums=('SKIP'
 
 _watchurl='https://cancel.fm/dl/'
 
-# !! AppImage is emptied if symbols are stripped away !!
-# But beyond that, the program is deployed with symbols on purpose
 options=('!strip')
-
-# AppImage is already compressed, no reason to compress it again
-# Kept as reminder
-#PKGEXT='.pkg.tar'
 
 prepare() {
   # Extract AppImage contents so we install bypassing every and all AppImage
