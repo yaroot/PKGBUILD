@@ -1,5 +1,5 @@
 pkgname=spago-bin
-pkgver=0.15.2
+pkgver=0.15.3
 pkgrel=1
 pkgdesc="PureScript package manager and build tool powered by Dhall and package-sets"
 arch=(x86_64)
@@ -7,7 +7,7 @@ url=https://github.com/purescript/spago
 license=(BSD)
 depends=(purescript)
 source=(spago-$pkgver.tar.gz::https://github.com/purescript/spago/releases/download/$pkgver/linux.tar.gz)
-sha256sums=('dd24a9ecabf48eb69687ade52c33f71c397ad8d2750de2dbe06678c8de618b4d')
+sha256sums=('d343cf2018c4f6ca995782c5d205d3f5e46686532e0e5a9c8308cc14889d0b27')
 _watchurl='https://api.github.com/repos/purescript/spago/releases'
 
 package() {
