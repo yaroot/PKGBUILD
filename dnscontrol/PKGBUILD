@@ -1,6 +1,6 @@
 pkgname=dnscontrol
 pkgver=3.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Synchronize your DNS to multiple providers from a simple DSL"
 arch=(x86_64)
 url=https://github.com/StackExchange/dnscontrol
