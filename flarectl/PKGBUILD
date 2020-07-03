@@ -1,0 +1,17 @@
+pkgname=flarectl
+pkgver=0.12.0
+pkgrel=1
+pkgdesc="A CLI application for interacting with a Cloudflare account"
+arch=(x86_64)
+url=https://github.com/cloudflare/cloudflare-go
+license=(MIT)
+source=(cloudflare-go-${pkgver}.tar.gz::https://github.com/cloudflare/cloudflare-go/archive/v${pkgver}.tar.gz)
+sha256sums=('SKIP')
+_watchurl='https://api.github.com/repos/cloudflare/cloudflare-go/releases'
+
+package() {
+    cd cloudflare-go-${pkgver}/cmd/flarectl
+    go build -trimpath -ldflags "-extldflags ${LDFLAGS}" -o flarectl
+
+    install -Dm 755 flarectl $pkgdir/usr/bin/flarectl
+}
