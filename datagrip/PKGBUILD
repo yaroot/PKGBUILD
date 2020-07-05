@@ -1,0 +1,18 @@
+pkgname=datagrip
+pkgver=2020.1.5
+pkgrel=1
+epoch=1
+pkgdesc="The Cross-Platform IDE for Databases & SQL by JetBrains"
+arch=('x86_64')
+options=(!strip)
+url="http://www.jetbrains.com/datagrip"
+license=('custom')
+source=("https://download.jetbrains.com/datagrip/datagrip-$pkgver.tar.gz")
+sha256sums=('a97231cbfe656ef3fcad5b66f3bd484cc676b5e89780543efdd49420ce690518')
+
+package() {
+    mkdir -p $pkgdir/opt $pkgdir/usr/bin
+
+    cp -r $srcdir/DataGrip-$pkgver $pkgdir/opt/datagrip
+    ln -sv /opt/datagrip/bin/datagrip.sh $pkgdir/usr/bin/datagrip
+}
