@@ -1,5 +1,5 @@
 pkgname=flarectl
-pkgver=0.12.0
+pkgver=0.12.1
 pkgrel=1
 pkgdesc="A CLI application for interacting with a Cloudflare account"
 arch=(x86_64)
