@@ -1,0 +1,14 @@
+pkgname=patchgirl
+pkgver=1.0.0
+pkgrel=1
+arch=('x86_64')
+url='https://github.com/patchgirl/patchgirl'
+license=('MPL2')
+options=(!strip)
+source=("patchgirl-$pkgver::https://github.com/patchgirl/patchgirl/releases/download/v$pkgver/linux-x86-64-patchgirl-runner-exe")
+sha256sums=('dec8f0f345bf6ac36590dd5acc29fb86b5656940bb9a8e3f4e1d1d6c2dca9608')
+_watchurl='https://api.github.com/repos/patchgirl/patchgirl/releases'
+
+package() {
+  install -D -m0755 patchgirl-$pkgver $pkgdir/usr/bin/patchgirl
+}
