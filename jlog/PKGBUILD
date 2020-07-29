@@ -1,5 +1,5 @@
 pkgname=jlog
-pkgver=2.5.2
+pkgver=2.5.3
 pkgrel=1
 pkgdesc="Journaled Log"
 arch=('i686' 'x86_64')
@@ -10,7 +10,7 @@ _watchurl='https://api.github.com/repos/omniti-labs/jlog/releases'
 
 build() {
   cd jlog-$pkgver
-  sed -i 's#define DEFAULT_UNIT_LIMIT [(]4#define DEFAULT_UNIT_LIMIT (512#' jlog_private.h
+  sed -i 's#define DEFAULT_UNIT_LIMIT [(]4#define DEFAULT_UNIT_LIMIT (128#' jlog_private.h
   autoconf
   ./configure --prefix=/usr
   make
@@ -20,4 +20,4 @@ package() {
   cd jlog-$pkgver
   make DESTDIR=$pkgdir install
 }
-sha256sums=('f649e289bcecd72341713fc5c0562037433aabaad47831a1249bd4f78bb24e58')
+sha256sums=('66730afc62aa9c9f93ef686998a5396f8721edca3750097d4a2848a688d55bf9')
