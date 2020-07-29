@@ -1,7 +1,6 @@
 pkgname=intellij-idea-ce
-_buildver=201.8743.12
 _veryear=2020
-_verrelease=1.4
+_verrelease=2
 pkgver=${_veryear}.${_verrelease}
 pkgrel=1
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
@@ -16,8 +15,8 @@ package() {
     cd $srcdir
     mkdir -p $pkgdir/opt $pkgdir/usr/bin
 
-    cp -r $srcdir/idea-IC-$_buildver $pkgdir/opt/$pkgname
-    ln -sv /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/idea
+    cp -r $srcdir/idea-IC-*/ $pkgdir/opt/$pkgname
+    ln -s /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/idea
 }
 
-sha256sums=('0f66522ebb379e9283feb98beefca23e5328157163e37feae484a5d1c28ebd94')
+sha256sums=('1e2858a478b02087333fff65674a83046f0f353ab053d80e225190faa0f7d567')
