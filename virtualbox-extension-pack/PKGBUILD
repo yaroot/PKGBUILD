@@ -26,7 +26,7 @@ prepare() {
 
 package() {
 	for FILE in ExtPack.manifest ExtPack.signature ExtPack.xml PXE-Intel.rom $(find ${installarch} -type f); do
-		install -D -m0644 ${FILE} "${pkgdir}/usr/lib/virtualbox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/${FILE}"
+		install -D -m0644 ${FILE} "${pkgdir}/opt/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/${FILE}"
 	done
 
 	install -D -m0644 ExtPack-license.txt \
