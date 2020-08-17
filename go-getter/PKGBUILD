@@ -1,0 +1,21 @@
+pkgname=go-getter
+_pkgname=$pkgname
+pkgver=1.4.1
+pkgrel=1
+pkgdesc=' Package for downloading things from a string URL using a variety of protocols'
+arch=('x86_64')
+url="https://github.com/hashicorp/$_pkgname/tree/v${pkgver}/cmd/go-getter"
+license=('MPL2')
+source=("$_pkgname-$pkgver.tar.gz::https://github.com/hashicorp/$_pkgname/archive/v$pkgver.tar.gz")
+sha256sums=('7fad2db3bde961e0cc65cc4c6645b9ca6b73c7d702e53736dae155f78120944a')
+
+build() {
+	cd "$_pkgname-$pkgver/cmd/$pkgname"
+	go build \
+		-trimpath \
+		-ldflags "-extldflags $LDFLAGS"
+}
+
+package() {
+	install -Dm 755 "$_pkgname-$pkgver/cmd/$pkgname/$pkgname" "$pkgdir/usr/bin/$pkgname"
+}
