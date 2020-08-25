@@ -1,6 +1,6 @@
 pkgname=intellij-idea-ultimate-edition
 _veryear=2020
-_verrelease=2
+_verrelease=2.1
 pkgver=${_veryear}.${_verrelease}
 pkgrel=1
 pkgdesc="Intellij Idea IDE with Intellij JDK"
@@ -19,4 +19,4 @@ package() {
     ln -s /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/ideau
 }
 
-sha256sums=('0a097d9e20f239bfd28be17ad36c5ce2cb7814c84f90da6ca827e5ea9e3ef8be')
+sha256sums=('cfa491b9831eed8649b32f047c6ddbb4722c0c0b019f343adbaf497831bee5a9')
