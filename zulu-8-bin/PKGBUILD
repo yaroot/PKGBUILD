@@ -1,6 +1,6 @@
 _java_ver=8
-_zulu_ver=8.48.0.51
-_zulu_build=8.0.262
+_zulu_ver=8.48.0.53
+_zulu_build=8.0.265
 _zulu_feature=-fx
 pkgname="zulu-${_java_ver}-bin"
 pkgver=$_zulu_ver
@@ -22,7 +22,7 @@ provides=(
 
 _tarball_name=zulu${_zulu_ver}-ca${_zulu_feature}-jdk${_zulu_build}-linux_x64
 source=("https://cdn.azul.com/zulu/bin/$_tarball_name.tar.gz")
-sha256sums=('dca027c2fc2c373ce0050431ad048b2bfc48064057617465fb619c0666555d20')
+sha256sums=('119c2d80077518885fe47b66c06fb1c6feb9fd6bad02d208e8d3171c3c3862a3')
 
 
 package() {
