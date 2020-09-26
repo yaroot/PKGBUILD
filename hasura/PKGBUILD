@@ -1,12 +1,12 @@
 pkgname=hasura
-pkgver=1.3.1
+pkgver=1.3.2
 pkgrel=1
 arch=('x86_64')
 url='https://github.com/hasura/graphql-engine'
 license=('APACHE')
 options=(!strip)
 source=("hasura-$pkgver::https://github.com/hasura/graphql-engine/releases/download/v${pkgver}/cli-hasura-linux-amd64")
-sha256sums=('d25fcb61c4e870168bb877cbc888b491b43c594a4c88875b405c6ab253ea4f0c')
+sha256sums=('5cddb617c70499ab10d209a052abc9286a1c36c84da571d6a19274de5e6dac61')
 _watchurl='https://api.github.com/repos/hasura/graphql-engine/releases'
 
 package() {
