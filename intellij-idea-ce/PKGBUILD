@@ -1,6 +1,6 @@
 pkgname=intellij-idea-ce
 _veryear=2020
-_verrelease=2.2
+_verrelease=2.3
 pkgver=${_veryear}.${_verrelease}
 pkgrel=1
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
@@ -19,4 +19,4 @@ package() {
     ln -s /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/idea
 }
 
-sha256sums=('e6c9e868da73a3e9936cd19d2bc99119a3cec8b622226a78583fc3ed0e4e764d')
+sha256sums=('5f2a407cc213a9c9db5534ffb7da3d501331a491dd1965b356e3067afee45a24')
