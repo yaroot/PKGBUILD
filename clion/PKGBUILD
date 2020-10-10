@@ -1,6 +1,6 @@
 pkgname=clion
 _dlname=CLion
-pkgver=2020.2.3
+pkgver=2020.2.4
 pkgrel=1
 epoch=1
 pkgdesc="C/C++ IDE. Free 30-day trial."
@@ -10,11 +10,11 @@ url="http://www.jetbrains.com/clion"
 license=('custom')
 source=("https://download.jetbrains.com/cpp/${_dlname}-${pkgver}.tar.gz")
 
-sha256sums=('b863b5b1ed664c21428e5afafb39ebf7f30d062ef53731f3d093d7ee74abb4cd')
-
 package() {
     mkdir -p $pkgdir/opt $pkgdir/usr/bin
 
     cp -r $srcdir/$pkgname-$pkgver $pkgdir/opt/$pkgname
     ln -sv /opt/clion/bin/clion.sh $pkgdir/usr/bin/$pkgname
 }
+
+sha256sums=('4301a1572908592e25fd9234c290eabcd44e53b23ababd7ed518a93728527976')
