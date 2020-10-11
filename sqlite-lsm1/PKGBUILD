@@ -16,7 +16,6 @@ build() {
 }
 
 package() {
-  find $srcdir/sqlite-src-$_srcver/ext/lsm1
   install -Dm755 $srcdir/sqlite-src-$_srcver/ext/lsm1/lsm.so $pkgdir/usr/lib/sqlite-lsm.so
 }
 
