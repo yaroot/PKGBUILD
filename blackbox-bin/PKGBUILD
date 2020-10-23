@@ -1,0 +1,26 @@
+pkgname=blackbox-git
+pkgver=production.r12.g513e9fc
+pkgrel=1
+pkgdesc="Safely store secrets in Git/Mercurial/Subversion"
+url="https://github.com/StackExchange/blackbox"
+arch=('i686' 'x86_64')
+license=('MIT')
+makedepends=('go>=1.12' 'git')
+
+source=("git+https://github.com/StackExchange/blackbox.git")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd blackbox
+    git describe --long --tags |sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+    cd blackbox
+    export GOPATH="$srcdir/build"
+    go build ./cmd/blackbox
+}
+
+package() {
+    install -Dm0755 $srcdir/blackbox/blackbox $pkgdir/usr/bin/blackbox
+}
