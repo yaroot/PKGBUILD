@@ -1,4 +1,4 @@
-pkgname=blackbox-git
+pkgname=stackexchange-blackbox-git
 pkgver=production.r12.g513e9fc
 pkgrel=1
 pkgdesc="Safely store secrets in Git/Mercurial/Subversion"
