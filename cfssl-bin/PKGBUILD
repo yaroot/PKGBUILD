@@ -1,10 +1,11 @@
-pkgname=cfssl
+pkgname=cfssl-bin
 pkgver=1.5.0
 pkgrel=1
 arch=('x86_64')
 url='https://github.com/cloudflare/cfssl'
 license=('BSD')
 options=(!strip)
+provides=(cfssl)
 source=(
   "cfssl-bundle_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl-bundle_${pkgver}_linux_amd64"
   "cfssl-certinfo_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl-certinfo_${pkgver}_linux_amd64"
