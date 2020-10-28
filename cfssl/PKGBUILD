@@ -1,0 +1,34 @@
+pkgname=cfssl
+pkgver=1.5.0
+pkgrel=1
+arch=('x86_64')
+url='https://github.com/cloudflare/cfssl'
+license=('BSD')
+options=(!strip)
+source=(
+  "cfssl-bundle_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl-bundle_${pkgver}_linux_amd64"
+  "cfssl-certinfo_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl-certinfo_${pkgver}_linux_amd64"
+  "cfssl-newkey_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl-newkey_${pkgver}_linux_amd64"
+  "cfssl-scan_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl-scan_${pkgver}_linux_amd64"
+  "cfssljson_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssljson_${pkgver}_linux_amd64"
+  "cfssl_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/cfssl_${pkgver}_linux_amd64"
+  "mkbundle_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/mkbundle_${pkgver}_linux_amd64"
+  "multirootca_${pkgver}::https://github.com/cloudflare/cfssl/releases/download/v${pkgver}/multirootca_${pkgver}_linux_amd64"
+)
+
+sha256sums=('133633a894e83356ba9f0a12af23c9b11420024df3b4b8196a1538e458f9547e'
+            'bbc0d9f3bd29279d488b884cb4ff097bfe8b6149320d8b4a39b7a19e63bb1e30'
+            'f936890ac1d53c0a088227c21834b638c8c42a96ffbb19377dac6d1b1163f01b'
+            '3566a1ef1df2a1e53e1c7f218ebd239b0f93ba6fa52df899d37dd9c3c7f8a5f0'
+            '3d33ef410313ca242ebdae1d9092447a8b02681a2b6d21d0a272f6e8d6d5191e'
+            'd5cea17ec190dd19ea300366c6fd7d2b41c8d9a599b30be79c290d1477f82c68'
+            '063205119fa8a263b6c8d5f2da55cba3e80a62e31ed3ab033a01babae4e06e2c'
+            'fc2693ebfbf498b136caf0aea3920bc7398e16a5192fea90346573323d4f94ef')
+
+_watchurl='https://api.github.com/repos/cloudflare/cfssl/releases'
+
+package() {
+  for bin in `echo cfssl-bundle cfssl-certinfo cfssl-newkey cfssl-scan cfssljson cfssl mkbundle multirootca`; do
+    install -Dm755 $srcdir/${bin}_${pkgver} $pkgdir/usr/bin/${bin}
+  done
+}
