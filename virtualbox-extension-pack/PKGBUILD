@@ -1,5 +1,5 @@
 pkgname=virtualbox-extension-pack
-pkgver=6.1.14
+pkgver=6.1.16
 pkgrel=1
 pkgdesc='Oracle VM VirtualBox Extension Pack - Support for USB 2.0 devices, VirtualBox RDP and PXE boot for Intel cards'
 arch=('i686' 'x86_64')
