@@ -1,5 +1,5 @@
 pkgname=dbeaver-bin
-pkgver=7.2.3
+pkgver=7.2.4
 pkgrel=1
 pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
 arch=('i686' 'x86_64')
@@ -30,4 +30,4 @@ package() {
     ln -s /opt/${pkgname}/dbeaver usr/bin/dbeaver
 }
 
-sha256sums_x86_64=('5d801ef9ef732bf7efc4127609acfdffde7ef89cc84329178fcf79dc8a1c0d95')
+sha256sums_x86_64=('46c5cbce74f3fd4db77bbef1cf220d8bc1d5b86a91e13acf69ffb0fbeccf387e')
