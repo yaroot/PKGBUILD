@@ -7,16 +7,10 @@ post_install() {
 	echo "#"
 	echo "##########"
 	echo ""
-
 }
 
 post_upgrade() {
 	echo "#   Remember to restart the bitwarden_rs unit via 'systemctl restart bitwarden_rs.service', if neccessary."
-}
-
-pre_remove() {
-	# Stop service
-	systemctl --quiet --no-reload disable --now bitwarden_rs.service
 }
 
 post_remove() {
