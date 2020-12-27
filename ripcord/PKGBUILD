@@ -1,5 +1,5 @@
 pkgname='ripcord'
-pkgver=0.4.27
+pkgver=0.4.28
 pkgrel=1
 pkgdesc='Qt-based Discord and Slack client'
 arch=('x86_64')
