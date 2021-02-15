@@ -30,4 +30,4 @@ package() {
     ln -s /opt/${pkgname}/dbeaver usr/bin/dbeaver
 }
 
-sha256sums_x86_64=('af5738bbb7a58480b9e995a91e0351521f0f75e6733fece90b468015f8259795')
+sha256sums_x86_64=('5d4ea3b7e5c4cf313df575a115ac0d0c2ae8f83f9ee005325d4bded02d100481')
