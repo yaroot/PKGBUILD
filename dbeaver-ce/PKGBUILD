@@ -31,3 +31,4 @@ package() {
 }
 
 sha256sums_x86_64=('5d4ea3b7e5c4cf313df575a115ac0d0c2ae8f83f9ee005325d4bded02d100481')
+sha256sums_x86_64=('0201b550a05f612ff90d6138ac807ba6d3cf7138d4baa2e59d8cdab8c6babce7')
