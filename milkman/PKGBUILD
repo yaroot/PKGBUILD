@@ -1,5 +1,5 @@
 pkgname=milkman
-pkgver=4.6.0
+pkgver=5.1.0
 pkgrel=1
 pkgdesc="An Extensible Request/Response Workbench"
 arch=('x86_64')
@@ -30,6 +30,6 @@ package() {
     ln -s /opt/milkman/milkman.sh $pkgdir/usr/bin/milkman
 }
 
-sha256sums_x86_64=('c1ad867b4cc6a596530de3cdf8b5f78bb2abbc5fb7a36d89fa31ce348cd023b5'
-                   '093ec35258a1ad9bb3a6899cbc4fb264818f3911e0c4d542699854d8d8c2aa08'
+sha256sums_x86_64=('bf64a9dc58ab0b284af401bf21bec409637230a250be1db57a0fdd8373873cbc'
+                   '83d1db252d35de8f2a987e55a9ad01e4f23706b728b1d8188b59b2f362defec3'
                    '8432e11c737515cbe5935a8ee7218fed70f3a7de065aea819c415d952e56cdc9')
