@@ -1,5 +1,5 @@
 pkgname=pandoc-bin
-pkgver=2.9.2.1
+pkgver=2.12
 pkgrel=1
 pkgdesc="Pandoc - executable only, without 750MB Haskell depends/makedepends"
 url="http://pandoc.org"
@@ -18,8 +18,6 @@ source=(
     "https://github.com/jgm/pandoc/releases/download/${pkgver}/pandoc-${pkgver}-linux-amd64.tar.gz"
     "https://github.com/jgm/pandoc/archive/${pkgver}.tar.gz"
 )
-sha256sums=('5b61a981bd2b7d48c1b4ba5788f1386631f97e2b46d0d1f1a08787091b4b0cf8'
-            '73ee38d29f928f69d6962956c1701c525141aaf6f428a8430f2cd901b191e933')
 
 package() {
     cd "${srcdir}/pandoc-${pkgver}"
@@ -30,7 +28,7 @@ package() {
     cp -R bin share "${pkgdir}/usr"
 
     # Citeproc is provided by a different package, and depends on various other datafiles we don't handle here.
-    rm "${pkgdir}/usr/bin/pandoc-citeproc" "${pkgdir}/usr/share/man/man1/pandoc-citeproc.1.gz"
+    # rm "${pkgdir}/usr/bin/pandoc-citeproc" "${pkgdir}/usr/share/man/man1/pandoc-citeproc.1.gz"
 
     # We're still missing all the datafiles and so on. We get those from the source tarball...
     cp -R data "${pkgdir}/usr/share/pandoc/"
@@ -38,5 +36,7 @@ package() {
 
     # When pandoc stopped having templates as a submodule, they copied various github turds into their source
     # tree, so let's tidy that up...
-    rm -R ${pkgdir}/usr/share/pandoc/data/templates/{.github,README.markdown}
+    # rm -R ${pkgdir}/usr/share/pandoc/data/templates/{.github,README.markdown}
 }
+sha256sums=('6d89c16f31ef4cd826133b35bbe978dd2ca7328d7b8d51fbaf2c02ca5b5553e0'
+            '0bc749a7806ca6c30f1343a202f103fe3c9566bd99d23dfc99e97fc9cbf14777')
