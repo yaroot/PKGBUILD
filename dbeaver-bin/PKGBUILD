@@ -7,8 +7,6 @@ url="http://dbeaver.com/"
 license=("Apache")
 depends=('java-runtime>=1.8' 'gtk3' 'gtk-update-icon-cache')
 options=(!strip)
-provides=(dbeaver)
-conflicts=(dbeaver)
 _watchurl='https://dbeaver.io/files/'
 
 source_x86_64=(https://download.dbeaver.com/lite/${pkgver}/dbeaver-le-${pkgver}-linux.gtk.x86_64.tar.gz)
