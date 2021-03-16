@@ -10,16 +10,6 @@ options=(!strip)
 _watchurl='https://dbeaver.io/files/'
 
 source_x86_64=(https://download.dbeaver.com/lite/${pkgver}/dbeaver-le-${pkgver}-linux.gtk.x86_64.tar.gz)
-#source_x86_64=(https://dbeaver.io/files/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz)
-
-#noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
-
-# prepare() {
-#     mkdir -p $srcdir/$pkgname
-#     cd $srcdir/$pkgname
-#     tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
-#     echo '-XX:+UseG1GC' >> $srcdir/dbeaver-bin/dbeaver/dbeaver.ini
-# }
 
 package() {
     cd $pkgdir
@@ -27,9 +17,7 @@ package() {
 
     mv $srcdir/dbeaver opt/$pkgname
     ln -s /opt/${pkgname}/dbeaver usr/bin/dbeaver-le
-
-    # cp -r $srcdir/$pkgname/dbeaver opt/$pkgname
-    # ln -s /opt/${pkgname}/dbeaver usr/bin/dbeaver
+    echo '-XX:+UseG1GC' >> opt/$pkgname/dbeaver.ini
 }
 
 sha256sums_x86_64=('ac36ca2843c319794ecb574088d83024315d17d091ebd0cc2b6fd8c38aca8744')
