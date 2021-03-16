@@ -1,4 +1,4 @@
-pkgname=dbeaver-bin
+pkgname=dbeaver-ce
 pkgver=7.3.5
 pkgrel=1
 pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
@@ -13,21 +13,13 @@ _watchurl='https://dbeaver.io/files/'
 
 source_x86_64=(https://dbeaver.io/files/${pkgver}/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz)
 
-noextract=("dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz")
-
-prepare() {
-    mkdir -p $srcdir/$pkgname
-    cd $srcdir/$pkgname
-    tar -xf "$srcdir/dbeaver-ce-${pkgver}-linux.gtk.x86_64.tar.gz"
-    echo '-XX:+UseG1GC' >> $srcdir/dbeaver-bin/dbeaver/dbeaver.ini
-}
-
 package() {
     cd $pkgdir
     mkdir -p opt usr/bin
 
-    cp -r $srcdir/$pkgname/dbeaver opt/$pkgname
+    cp -r $srcdir/dbeaver opt/$pkgname
     ln -s /opt/${pkgname}/dbeaver usr/bin/dbeaver
+    echo '-XX:+UseG1GC' >> opt/$pkgname/dbeaver.ini
 }
 
 sha256sums_x86_64=('0201b550a05f612ff90d6138ac807ba6d3cf7138d4baa2e59d8cdab8c6babce7')
