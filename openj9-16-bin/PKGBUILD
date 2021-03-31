@@ -1,0 +1,36 @@
+_java_ver=16
+_j9_ver=0.25.0
+_j9_build=36
+pkgname="openj9-${_java_ver}-bin"
+pkgver=$_j9_ver
+pkgrel=1
+pkgdesc='openj9'
+arch=('x86_64')
+url='https://adoptopenjdk.net'
+license=('custom')
+options=(!strip)
+depends=('java-environment-common=3' 'java-runtime-common>=3' 'ca-certificates-utils')
+provides=(
+  "java-environment=$_java_ver"
+  "java-environment-openjdk=$_java_ver"
+  "java-runtime-headless=$_java_ver"
+  "java-runtime-headless-openjdk=$_java_ver"
+  "java-runtime=$_java_ver"
+  "java-runtime-openjdk=$_java_ver"
+)
+
+_tarball_name=OpenJDK${_java_ver}-jdk_x64_linux_openj9_${_java_ver}_${_j9_build}_openj9-${_j9_ver}.tar.gz
+_url_ver=jdk-${_java_ver}+${_j9_build}_openj9-${_j9_ver}
+source=("https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/$_url_ver/$_tarball_name")
+
+
+package() {
+  install_dir=$pkgdir/usr/lib/jvm
+
+  mkdir -p $install_dir
+  mv "$srcdir/jdk-${_java_ver}+${_j9_build}" $install_dir/openj9-$_java_ver
+  rm -rf $install_dir/openj9-$_java_ver/{legal,demo}
+}
+
+
+sha256sums=('9f9b327d08cbc71b32f28004ae9d9c2c84ff9bc335cac3068c5a5737bfa4606f')

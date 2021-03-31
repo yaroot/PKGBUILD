@@ -1,6 +1,6 @@
-_java_ver=14
-_zulu_ver=14.29.23
-_zulu_build=14.0.2
+_java_ver=16
+_zulu_ver=16.28.11
+_zulu_build=16.0.0
 _zulu_feature='-fx'
 pkgname="zulu-${_java_ver}-bin"
 pkgver=$_zulu_ver
@@ -20,9 +20,9 @@ provides=(
   "java-runtime-openjdk=$_java_ver"
 )
 
+
 _tarball_name=zulu${_zulu_ver}-ca${_zulu_feature}-jdk${_zulu_build}-linux_x64
 source=("https://cdn.azul.com/zulu/bin/$_tarball_name.tar.gz")
-sha256sums=('502f7c9b93affb46eed532b5c18277bb5747987ce7356c21514ef630634788cc')
 
 
 package() {
@@ -32,3 +32,6 @@ package() {
   mv $srcdir/$_tarball_name $install_dir/zulu-$_java_ver
   rm -rf $install_dir/zulu-$_java_ver/{legal,demo}
 }
+
+
+sha256sums=('ec7cb45f5f4b2357c0a4b876ea442e89e532e236fcbca4425b4d99d3254ae33b')
