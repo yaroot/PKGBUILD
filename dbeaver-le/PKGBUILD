@@ -20,4 +20,4 @@ package() {
     echo '-XX:+UseG1GC' >> opt/$pkgname/dbeaver.ini
 }
 
-sha256sums_x86_64=('ac36ca2843c319794ecb574088d83024315d17d091ebd0cc2b6fd8c38aca8744')
+sha256sums_x86_64=('41454134e533e809a62fbcc37e4f69f0e5a6d2f79576e53b0fd4589c4e5fb215')
