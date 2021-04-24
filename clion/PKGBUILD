@@ -1,6 +1,6 @@
 pkgname=clion
 _dlname=CLion
-pkgver=2021.1
+pkgver=2021.1.1
 pkgrel=1
 epoch=1
 pkgdesc="C/C++ IDE. Free 30-day trial."
@@ -17,4 +17,4 @@ package() {
     ln -sv /opt/clion/bin/clion.sh $pkgdir/usr/bin/$pkgname
 }
 
-sha256sums=('fd82ff4e335f5a69e0e8ac2d442bfb29f5bd11d814b21efc481e0b77499802e3')
+sha256sums=('30697eb96348e22668079f86758380880284d29848b29a3058cc19fc869bf477')
