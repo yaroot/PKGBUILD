@@ -1,5 +1,5 @@
 pkgname=dbeaver-le
-pkgver=21.0.3
+pkgver=21.1.0
 pkgrel=1
 pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
 arch=('x86_64')
@@ -9,7 +9,7 @@ depends=('java-runtime>=1.8' 'gtk3' 'gtk-update-icon-cache')
 options=(!strip)
 _watchurl='https://dbeaver.io/files/'
 
-source_x86_64=(https://download.dbeaver.com/lite/${pkgver}/dbeaver-le-${pkgver}-linux.gtk.x86_64.tar.gz)
+source_x86_64=(https://dbeaver.com/files/ea/lite/dbeaver-le-${pkgver}-linux.gtk.x86_64.tar.gz)
 
 package() {
     cd $pkgdir
@@ -20,4 +20,4 @@ package() {
     echo '-XX:+UseG1GC' >> opt/$pkgname/dbeaver.ini
 }
 
-sha256sums_x86_64=('41454134e533e809a62fbcc37e4f69f0e5a6d2f79576e53b0fd4589c4e5fb215')
+sha256sums_x86_64=('6be6260cd1906f0f24ae1de2be47b842d50c5bfbb3d3a30b4b60df4810dd114c')
