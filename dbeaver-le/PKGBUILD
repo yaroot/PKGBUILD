@@ -1,5 +1,5 @@
 pkgname=dbeaver-le
-pkgver=21.1.0
+pkgver=21.1.2
 pkgrel=1
 pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
 arch=('x86_64')
@@ -20,4 +20,4 @@ package() {
     echo '-XX:+UseG1GC' >> opt/$pkgname/dbeaver.ini
 }
 
-sha256sums_x86_64=('6be6260cd1906f0f24ae1de2be47b842d50c5bfbb3d3a30b4b60df4810dd114c')
+sha256sums_x86_64=('f527e766a23016b7a126c7fef524b9b278342f4f86ff6744e3f72edcc22d75d9')
