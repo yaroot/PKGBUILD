@@ -1,8 +1,7 @@
 pkgname=clion
 _dlname=CLion
 pkgver=2021.2
-pkgrel=1
-epoch=1
+pkgrel=2
 pkgdesc="C/C++ IDE. Free 30-day trial."
 arch=('x86_64')
 options=(!strip)
