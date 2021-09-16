@@ -14,7 +14,7 @@ sha256sums=('SKIP')
 
 package() {
     cd $srcdir
-    mkdir -p $pkgdir/opt/$pkgname $pkgdir/usr/bin
+    mkdir -p $pkgdir/opt $pkgdir/usr/bin
 
     cp -r $srcdir/idea-IC-*/ $pkgdir/opt/$pkgname
     ln -s /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/idea
