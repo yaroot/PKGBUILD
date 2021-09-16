@@ -1,6 +1,6 @@
 pkgname=intellij-idea-ce
 _veryear=2021
-_verrelease=2.1
+_verrelease=2.2
 pkgver=${_veryear}.${_verrelease}
 pkgrel=2
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
@@ -10,13 +10,13 @@ url="http://www.jetbrains.com/idea/"
 license=('Apache2')
 depends=('giflib' 'libxtst')
 source=("https://download.jetbrains.com/idea/ideaIC-${pkgver}.tar.gz")
+sha256sums=('SKIP')
 
 package() {
     cd $srcdir
-    mkdir -p $pkgdir/opt $pkgdir/usr/bin
+    mkdir -p $pkgdir/opt/$pkgname $pkgdir/usr/bin
 
     cp -r $srcdir/idea-IC-*/ $pkgdir/opt/$pkgname
     ln -s /opt/$pkgname/bin/idea.sh $pkgdir/usr/bin/idea
 }
 
-sha256sums=('ff078524f38391d396747007de41f9db02698c107f8e9cd86178fb1c0a1bc4a9')
