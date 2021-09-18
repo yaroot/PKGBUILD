@@ -31,4 +31,4 @@ package() {
   rm -rf $install_dir/zulu-$_java_ver/{legal,demo}
 }
 
-sha256sums=('d818b46fabc2839e5cd2beba0620826734942ff473e560d648e3a8f86a9bb496')
+sha256sums=('b91cb27352a74168ce0bfb5f913c1803851e6e6176eb7fd6e6618889580601dd')
