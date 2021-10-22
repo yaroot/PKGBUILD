@@ -1,6 +1,6 @@
 pkgname=intellij-idea-ultimate-edition
 _veryear=2021
-_verrelease=2.2
+_verrelease=2.3
 pkgver=${_veryear}.${_verrelease}
 pkgrel=1
 pkgdesc="Intellij Idea IDE with Intellij JDK"
