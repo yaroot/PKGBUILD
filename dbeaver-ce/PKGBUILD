@@ -1,5 +1,5 @@
 pkgname=dbeaver-ce
-pkgver=21.2.3
+pkgver=21.2.4
 pkgrel=1
 pkgdesc="A universal database tool for developers and database administrators. Enterprise Edition includes NoSQL database support"
 arch=('x86_64')
