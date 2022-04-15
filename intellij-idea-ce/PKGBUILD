@@ -1,8 +1,6 @@
 pkgname=intellij-idea-ce
-_veryear=2021
-_verrelease=3.3
-pkgver=${_veryear}.${_verrelease}
-pkgrel=2
+pkgver=2022.1
+pkgrel=1
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
 arch=('any')
 options=(!strip)

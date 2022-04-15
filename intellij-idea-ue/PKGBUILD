@@ -1,7 +1,5 @@
 pkgname=intellij-idea-ue
-_veryear=2021
-_verrelease=3.3
-pkgver=${_veryear}.${_verrelease}
+pkgver=2022.1
 pkgrel=1
 pkgdesc="Intellij Idea IDE with Intellij JDK"
 arch=('any')
