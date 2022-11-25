@@ -1,5 +1,5 @@
 pkgname=intellij-idea-ce
-pkgver=2022.2.3
+pkgver=2022.2.4
 pkgrel=1
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
 arch=('any')
