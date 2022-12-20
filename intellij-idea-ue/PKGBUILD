@@ -1,5 +1,5 @@
 pkgname=intellij-idea-ue
-pkgver=2022.2.3
+pkgver=2022.3
 pkgrel=1
 pkgdesc="Intellij Idea IDE with Intellij JDK"
 arch=('any')
