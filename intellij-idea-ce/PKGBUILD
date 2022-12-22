@@ -1,11 +1,12 @@
+PKGEXT='.pkg.tar'
 pkgname=intellij-idea-ce
-pkgver=2022.3
+pkgver=2022.3.1
 pkgrel=1
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
 arch=('any')
 options=(!strip)
 url="http://www.jetbrains.com/idea/"
-license=('Apache2')
+license=('Apache')
 depends=('giflib' 'libxtst')
 source=("https://download.jetbrains.com/idea/ideaIC-${pkgver}.tar.gz")
 sha256sums=('SKIP')
