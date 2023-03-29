@@ -1,6 +1,6 @@
 PKGEXT='.pkg.tar'
 pkgname=intellij-idea-ce
-pkgver=2022.3.2
+pkgver=2022.3.3
 pkgrel=1
 pkgdesc="Intellij Idea IDE (community version) with Intellij JDK"
 arch=('any')
